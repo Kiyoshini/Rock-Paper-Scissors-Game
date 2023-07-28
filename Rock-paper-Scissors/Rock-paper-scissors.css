@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+
+body {
+  background-color: rgba(23, 23, 27, 0.856);
+}
+
+p {
+  color: white;
+	font-size: 36px;
+	font-family: ;
+	font-weight: bold;
+}
+
+.title-score-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding-top: 40px;
+}
+
+.title-score {
+	display: flex;
+	justify-content: space-between;
+	width: 800px;
+	height: 130px;
+
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgb(130, 130, 130);
+	border-radius: 10px;
+
+padding: 20px;
+} 
+
+.title {
+	display: flex;
+	justify-content: flex-start;
+	width: 100px;
+}
+
+.score-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+	color: white;
+	width: 360px;
+}
+
+.won, .lost, .tie {
+	max-height: 60px;
+	
+	background-color: rgb(255, 255, 255);
+	color: rgba(122, 121, 121, 0.856);
+
+	font-size: 16px;
+	font-weight: bold;
+
+	border-radius: 5px;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.won-score, .lost-score, .tie-score {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-size: 36px;
+}
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock-Paper-Scissors-Game</title>
+  <link rel="stylesheet" href="Rock-paper-scissors.css">
+</head>
+<body>
+  <div class="title-score-container">
+    <div class="title-score">
+      <div class="title">
+        <p>ROCK PAPER SCISSORS</p>
+      </div>
+      <div class="score-container">
+        <div class="won">
+          Won
+          <div class="won-score">
+            0
+          </div>
+        </div>
+        <div class="lost">
+          Lost
+          <div class="lost-score">
+            0
+          </div>
+        </div>
+        <div class="tie">
+          Tie
+          <div class="tie-score">
+            0
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button onclick="
+    const computerMove = pickComputerMove();
+    console.log(computerMove);
+    playGame('Rock');
+  ">Rock</button>
+
+  <button onclick="
+    const computerMove = pickComputerMove();
+    console.log(computerMove);
+    playGame('Paper');
+  ">Paper</button>
+
+  <button onclick="
+    const computerMove = pickComputerMove();
+    console.log(computerMove);
+    playGame('Scissors');
+  ">Scissors</button>
+
+  <button onclick="
+    clearScore();
+  ">Reset Score</button>
+
+    <script src="rock-paper-scissors.js"></script>
+
+</body> 
+</html>
