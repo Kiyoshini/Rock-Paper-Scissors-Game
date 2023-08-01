@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock-Paper-Scissors-Game</title>
+  <link rel="stylesheet" href="Rock-paper-scissors.css">
+</head>
+<body>
+  <script src="rock-paper-scissors.js"></script>
+  <div class="title-score-container">
+    <div class="title-score">
+      <div class="title">
+        <p>ROCK PAPER SCISSORS</p>
+      </div>
+      <div class="score-container">
+        <div class="won">
+          Won
+          <div class="won-score">
+            0
+          </div>
+        </div>
+        <div class="lost">
+          Lost
+          <div class="lost-score">
+            0
+          </div>
+        </div>
+        <div class="tie">
+          Tie
+          <div class="tie-score">
+            0
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="result">
+
+  </div>
+
+  <div>
+    <div class="human-move">
+  
+    </div>
+  </div>
+  
+
+  <div class="gameGrid">
+    <button id="rock-Button" onclick="
+      const computerMove = pickComputerMove();
+      console.log(computerMove);
+      playGame('Rock');
+      updateScoreElement();
+      hideButton()
+    ">
+    <img class="rock-image-container" src="images/Rock-emoji.png"> 
+    </button>
+
+    <button id="paper-Button" onclick="
+      const computerMove = pickComputerMove();
+      console.log(computerMove);
+      playGame('Paper');
+      updateScoreElement();
+      
+    ">
+    <img class="rock-image-container" src="images/Paper-emoji.png">
+    </button>
+
+    <button id="scissors-Button" onclick="
+      const computerMove = pickComputerMove();
+      console.log(computerMove);
+      playGame('Scissors');
+      updateScoreElement();
+    ">
+    <img class="rock-image-container" src="images/Scissors-emoji.png">
+    </button>
+
+    <button class="rest-Score-Button" onclick="
+    clearScore();
+    updateScoreElement();
+    ">Reset Score
+    </button>
+
+  </div>
+
+</body> 
+</html>

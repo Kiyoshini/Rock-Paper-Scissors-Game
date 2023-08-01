@@ -71,8 +71,6 @@ function playGame(playerMove) {
 }
 
 
-
-
 function updateScoreElement() {
   let wonScoreDisplay = document.querySelector('.won-score');
   let lostScoreDisplay = document.querySelector('.lost-score');
@@ -99,7 +97,7 @@ function pickComputerMove () {
   computerMove = 'Scissors';
   }
   return computerMove;
-
+  
 } 
 
 function clearScore () {
@@ -108,4 +106,5 @@ function clearScore () {
   score.ties = 0;
   localStorage.removeItem('score');
 }
+
 

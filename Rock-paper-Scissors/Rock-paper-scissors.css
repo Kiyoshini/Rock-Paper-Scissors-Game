@@ -6,6 +6,7 @@
 
 body {
   background-color: rgba(23, 23, 27, 0.856);
+	
 }
 
 p, .result, .human-move, .computer-move {
@@ -83,7 +84,7 @@ p, .result, .human-move, .computer-move {
 	border-radius: 50%;
 }
 
-.rock-Button, .paper-Button, .scissors-Button, .computer-move-image, .human-move-image {
+#rock-Button, #paper-Button, #scissors-Button, .computer-move-image, .human-move-image {
 	border-radius: 50%;
 	border-style: solid;
 	border-color: rgb(65, 65, 83);
@@ -114,4 +115,39 @@ p, .result, .human-move, .computer-move {
 	border-style: solid;
 	border-color: rgb(74, 74, 104);
 	border-width: 10px;
+}
+
+.gameGrid {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#rock-Button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: fixed;
+	top: 400px;
+	left: 950px;
+}
+
+#paper-Button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: fixed;
+	top: 400px;
+	right: 950px;
+}
+
+#scissors-Button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: fixed;
+	top: 750px; 
 }
