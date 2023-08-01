@@ -1,5 +1,3 @@
-let wonScore = document.querySelector('.won-score').innerHTML;
-
 let score = JSON.parse(localStorage.getItem('score'));
 
 if (!score) {
@@ -8,6 +6,11 @@ if (!score) {
   loses: 0,
   ties: 0,
   };
+}
+
+function showResult(result) {
+  let rockResult = document.querySelector('.result');
+  rockResult.textContent = 'Result : ' + result;
 }
 
 function playGame(playerMove) {
@@ -53,13 +56,35 @@ function playGame(playerMove) {
     score.ties += 1;
   }
 
+
+
   localStorage.setItem('score', JSON.stringify(score));
+
 
   console.log(score);
 
-  alert(`You picked ${playerMove}. computer picked ${computerMove}. ${result} 
-Wins: ${score.wins}, Losses: ${score.loses}, Ties: ${score.ties}`);
+
+  showResult(result);
+
+  document.querySelector('.human-move').innerHTML = ` You <img class="human-move-image" src="images/${playerMove}-emoji.png"> 
+  <img class="human-move-image" src="images/${computerMove}-emoji.png"> Computer`;
 }
+
+
+
+
+function updateScoreElement() {
+  let wonScoreDisplay = document.querySelector('.won-score');
+  let lostScoreDisplay = document.querySelector('.lost-score');
+  let tieScoreDisplay = document.querySelector('.tie-score');
+
+  wonScoreDisplay.textContent = score.wins;
+  lostScoreDisplay.textContent = score.loses;
+  tieScoreDisplay.textContent = score.ties;
+
+}
+
+
 
 function pickComputerMove () {
   const randomNumber = Math.random();
@@ -74,6 +99,7 @@ function pickComputerMove () {
   computerMove = 'Scissors';
   }
   return computerMove;
+
 } 
 
 function clearScore () {
@@ -82,3 +108,4 @@ function clearScore () {
   score.ties = 0;
   localStorage.removeItem('score');
 }
+

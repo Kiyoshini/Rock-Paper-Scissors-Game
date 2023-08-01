@@ -35,26 +35,46 @@
     </div>
   </div>
 
-  <button onclick="
+  <div class="result">
+    Result : 
+  </div>
+  <div>
+    <div class="human-move">
+    </div>
+
+  </div>
+
+  <button class="rock-Button" onclick="
     const computerMove = pickComputerMove();
     console.log(computerMove);
     playGame('Rock');
-  ">Rock</button>
+    updateScoreElement();
+  ">
+  <img class="rock-image-container" src="images/Rock-emoji.png"> 
+  </button>
 
-  <button onclick="
+  <button class="paper-Button" onclick="
     const computerMove = pickComputerMove();
     console.log(computerMove);
     playGame('Paper');
-  ">Paper</button>
+    updateScoreElement();
+  
+  ">
+   <img class="rock-image-container" src="images/Paper-emoji.png">
+  </button>
 
-  <button onclick="
+  <button class="scissors-Button" onclick="
     const computerMove = pickComputerMove();
     console.log(computerMove);
     playGame('Scissors');
-  ">Scissors</button>
+    updateScoreElement();
+  ">
+  <img class="rock-image-container" src="images/Scissors-emoji.png">
+  </button>
 
-  <button onclick="
+  <button class="rest-Score-Button" onclick="
     clearScore();
+    updateScoreElement();
   ">Reset Score</button>
 
     <script src="rock-paper-scissors.js"></script>
