@@ -1,0 +1,23 @@
+body {
+	font-family: Arial;
+}
+
+
+#js-cost-input {
+	padding: 10px;
+	font-size: 15px;
+}
+
+#js-cost-input:focus {
+	outline : none;
+}
+
+#calculate-button {
+	background-color: green;
+	color: white;
+
+	border: none;
+	font-size: 15px;
+	padding: 12px 15px;
+	cursor: pointer;
+}
